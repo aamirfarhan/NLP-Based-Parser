@@ -1,0 +1,10 @@
+<html>
+  <head></head>
+  <body>
+    hellooooo
+    <form> method = "post", action="/students/create">
+      <div> Name: <input type="text", name="name"></div>
+      <div> Rollno: <input type="text", name="rollno"></div>
+      <input type="submit">
+  </body>
+</html>

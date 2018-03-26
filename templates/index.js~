@@ -1,0 +1,23 @@
+alert("hi");
+var parse = function(){
+    var $data=$("#dataToParse input[name=pageData]").val();
+  $.ajax({
+    url: 'http://127.0.0.1:3000/parseHere/',
+    method: 'POST',
+    data:{
+      pageData: $data
+    },
+    success: function(response){
+      console.log(response);
+      var $t = $("#addStuff");
+      $t.html(response);
+
+    },
+    error: function(response)
+          {
+            console.log(response);
+          }
+  });
+  
+  $("#dataToParse input[name=pageData]").val("");
+}
